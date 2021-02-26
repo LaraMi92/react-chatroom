@@ -1,5 +1,5 @@
 @use 'src/styles/vars';
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap');
 
 @keyframes shake {
   10%, 90% {
@@ -20,9 +20,18 @@
 }
 
 .messages{
-
-  &--body{
-    font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', cursive;
+  color: vars.$dark-color;
+  font-weight: 600;
+  width: 100%;
+  overflow: hidden;
+  &--name{
+    font-weight: 300;
+    font-size: small;
+    
+  }
+  &--thumbnail{
+    border-radius: 50%;
   }
   &--own{
     color: vars.$main-color;

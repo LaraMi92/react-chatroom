@@ -18,7 +18,7 @@ const Messages = ({ messages, id, identity }) => (
         )
         : (
           <div key={index} className="messages--notification">
-            <img src={identity.picture.thumbnail} alt="user-thumbnail" />
+            <img src={identity.picture.thumbnail} alt="user-thumbnail" className="messages--thumbnail" />
             <div className="messages--name">
               {identity.name.first} {identity.name.last}
             </div>

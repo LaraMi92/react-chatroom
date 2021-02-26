@@ -4,7 +4,7 @@ import socketClient from 'socket.io-client';
 import axios from 'axios';
 
 // == Local Imports
-import './styles.css';
+import './app.scss';
 import Messages from 'src/components/Messages';
 import Form from 'src/components/Form';
 
