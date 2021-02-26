@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+@use 'src/styles/reset';
+
+.form{
+ position: absolute;
+ bottom: -5%;
+
+  &--all{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    border: 1px solid vars.$main-color;
+    border-radius: .5rem;
+    flex-flow: row wrap;
+    align-content: space-around;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0px 12px 18px 14px rgba(171,212,234,0.75);
+  }
+  &--input{
+    width: 90%;
+    padding: 1rem;
+    border: none;
+  }
+  &--button{
+    display: inline-block;
+    width: 10%;
+    padding: .2rem;
+    object-fit: contain;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+ 
+}
