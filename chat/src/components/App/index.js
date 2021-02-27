@@ -7,6 +7,7 @@ import axios from 'axios';
 import './app.scss';
 import Messages from 'src/components/Messages';
 import Form from 'src/components/Form';
+import Error from 'src/components/Error';
 
 // == Composant
 const App = () => {
@@ -28,12 +29,12 @@ const App = () => {
       setId(id);
     });
     socketRef.current.on('message', (message) => {
-      console.log(message);
+      // console.log(message);
       receivedMessage(message);
     });
     axios.get('https://randomuser.me/api/')
       .then((data) => setInfos(data.data.results[0]))
-      .catch((err) => setError('Oops we couldnt catch your name because', err));
+      .catch((err) => setError(err));
   }, []);
 
   const sendMessage = (event) => {
@@ -53,6 +54,7 @@ const App = () => {
 
   return (
     <div className="app">
+      {error.length !== 0 && (<Error error={error} />)}
       <Messages messages={messages} id={yourId} identity={infos} />
       <Form handleChange={handleChange} submitForm={sendMessage} inputValue={message} />
     </div>

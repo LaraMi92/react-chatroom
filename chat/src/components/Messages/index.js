@@ -1,6 +1,6 @@
 // == Import npm
 import React from 'react';
-
+import PropTypes from 'prop-types';
 // == Local Imports
 import './messages.scss';
 
@@ -33,5 +33,14 @@ const Messages = ({ messages, id, identity }) => (
   </div>
 );
 
+Messages.propTypes = {
+  messages: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  id: PropTypes.string,
+};
 // == Export
 export default Messages;

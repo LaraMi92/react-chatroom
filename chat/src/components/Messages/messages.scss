@@ -25,6 +25,10 @@
   font-weight: 600;
   width: 100%;
   overflow: hidden;
+
+  &--body{
+  padding-bottom: .5rem;
+  }
   &--name{
     font-weight: 300;
     font-size: small;

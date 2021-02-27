@@ -1,5 +1,6 @@
 // == Import npm
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // == Local Imports
 import './form.scss';
@@ -26,6 +27,12 @@ const Form = ({
     </form>
   </div>
 );
+
+Form.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  inputValue: PropTypes.string.isRequired,
+  submitForm: PropTypes.func.isRequired,
+};
 
 // == Export
 export default Form;
